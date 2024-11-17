@@ -1,0 +1,196 @@
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0d0d0d; /* Darker background */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #0b0b0b; /* More black than gray */
+    padding: 10px 50px; /* Thinner top bar */
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Adjust button spacing */
+}
+
+.social-icons a.button {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px; /* Adjust button size */
+    background-color: #ff0000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icons a.button:hover {
+    background-color: #cc0000;
+    color: #ffffff;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-logo {
+    max-width: 30%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Smooth transition for scroll effect */
+}
+
+.content-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff0000; /* Red headings */
+}
+
+.content-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+footer {
+    position: relative;
+    background: url('footer.png') no-repeat center center;
+    background-size: cover;
+    height: 100px; /* Match the height of footer.png */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.footer-left {
+    position: absolute;
+    left: 20px; /* Adjust as needed to sit near the left edge of the logo */
+    font-size: 0.9rem;
+}
+
+.footer-right {
+    position: absolute;
+    right: 20px; /* Adjust as needed to sit near the right edge of the logo */
+    font-size: 0.9rem;
+}
+
+
+
+button, .cta-button {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .cta-button:hover {
+    background-color: #cc0000;
+}
+
+#contributors {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contributors-list {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff;
+}
+
+.contributors-list li {
+    margin-bottom: 15px;
+}
+
+.section-heading {
+    color: #ff0000; /* Keeping the red color for consistency */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-icons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-logo {
+        max-width: 50%; /* Increase logo size for smaller screens */
+    }
+
+    .content-section {
+        padding: 40px 20px;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .hero-logo {
+        max-width: 60%; /* Further increase logo size for mobile screens */
+    }
+
+    .section-heading {
+        font-size: 1.8rem;
+    }
+
+    .content-section p {
+        font-size: 1rem;
+    }
+}
+
+
